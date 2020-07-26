@@ -9,6 +9,14 @@ Changelog
 
 0.16
 ====
+0.16.14
+-------
+- Make ``F`` expression work with ``QuerySet.filter()``.
+- Include ``py.typed`` in source distribution.
+- Added ``datetime`` parsing from ``int`` for ``fields.DatetimeField``.
+- ``get_or_create`` passes the ``using_db=`` on if provided.
+- Allow custom ``loop`` and ``connection_class`` parameters to be passed on to asyncpg.
+
 0.16.13
 -------
 - Default install of ``tortoise-orm`` now installs with no C-dependencies, if you want to use the C accelerators, please do a ``pip install tortoise-orm[accel]`` instead.
