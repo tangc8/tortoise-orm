@@ -7,8 +7,8 @@ import pyodbc
 from pypika import Dialects
 from pypika.queries import Query, QueryBuilder
 
-from tortoise.backends.aioodbc.executor import AioodbcExecutor
-from tortoise.backends.aioodbc.schema_generator import AioodbcSchemaGenerator
+from tortoise.backends.aioodbc_oracle.executor import AioodbcExecutor
+from tortoise.backends.aioodbc_oracle.schema_generator import AioodbcSchemaGenerator
 from tortoise.backends.base.client import (
     BaseDBAsyncClient,
     BaseTransactionWrapper,

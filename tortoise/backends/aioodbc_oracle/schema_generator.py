@@ -3,7 +3,7 @@ from typing import TYPE_CHECKING, List, Type
 from tortoise.backends.base.schema_generator import BaseSchemaGenerator
 
 if TYPE_CHECKING:  # pragma: nocoverage
-    from tortoise.backends.aioodbc.client import AioodbcDBClient
+    from tortoise.backends.aioodbc_oracle.client import AioodbcDBClient
     from tortoise.models import Model
 
 

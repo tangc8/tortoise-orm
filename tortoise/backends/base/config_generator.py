@@ -58,7 +58,7 @@ DB_LOOKUP: Dict[str, Dict[str, Any]] = {
         },
     },
     "oracle": {
-        "engine": "tortoise.backends.aioodbc",
+        "engine": "tortoise.backends.aioodbc_oracle",
         "vmap": {
             "path": "database",
             "hostname": "host",

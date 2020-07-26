@@ -320,6 +320,25 @@ class TestConfigGenerator(test.SimpleTestCase):
             },
         )
 
+    def test_oracle_basic(self):
+        res = expand_db_url("oracle://pass@host/test?driver=/lib/libsqora.so.19.1")
+        self.assertDictEqual(
+            res,
+            {
+                "engine": "tortoise.backends.aioodbc_oracle",
+                "credentials": {
+                    "charset": "utf8mb4",
+                    "database": "test",
+                    "driver": "/lib/libsqora.so.19.1",
+                    "host": "host",
+                    "password": "",
+                    "port": 1521,
+                    "sql_mode": "STRICT_TRANS_TABLES",
+                    "user": "pass",
+                },
+            },
+        )
+
     def test_generate_config_basic(self):
         res = generate_config(
             db_url="sqlite:///some/test.sqlite",
