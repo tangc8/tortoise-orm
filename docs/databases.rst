@@ -175,7 +175,7 @@ Oracle
 
 Guide for setting up ODBC for Oracle: https://github.com/mkleehammer/pyodbc/wiki/Connecting-to-Oracle-from-RHEL-or-Centos
 
-DB URL is typically in the form of :samp:`mysql://myuser:mypass:pass@db.host:3306/somedb`
+DB URL is typically in the form of :samp:`oracle://myuser:mypass:pass@db.host:1521/somedb?driver=<path_to_lib>`
 
 Required Parameters
 -------------------
@@ -190,6 +190,8 @@ Required Parameters
     Network port that database is available at. (defaults to ``3306``)
 ``database``:
     Database to use.
+``driver``:
+    Driver library to use for ODBC setup
 
 Optional parameters:
 --------------------
@@ -198,8 +200,11 @@ Optional parameters:
     Minimum connection pool size
 ``maxsize`` (defaults to ``5``):
     Maximum connection pool size
+``echo`` (defaults to ``False``):
+    Set to `True`` to echo SQL queries (debug only)
+``pool_recycle`` (defaults to ``-1``):
+    Age in seconds to recycle an idle connection
 
-More to be determined.
 
 .. _db_ssl:
 
