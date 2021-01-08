@@ -10,4 +10,5 @@ def initialize_tests(request):
     db_url = os.environ.get("TORTOISE_TEST_DB", "sqlite://:memory:")
     initializer(["tests.testmodels"], db_url=db_url)
     print('dfads')
+    print('develop')
     request.addfinalizer(finalizer)
